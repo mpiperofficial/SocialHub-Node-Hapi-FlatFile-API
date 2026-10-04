@@ -1,0 +1,14 @@
+{
+  "name": "socialhub-api",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Hapi API for the SocialHub portfolio app with JSON flat-file persistence",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^21.3.12"
+  }
+}
