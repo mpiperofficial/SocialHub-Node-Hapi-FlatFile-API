@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "author": "Jamie Lee",
+    "initials": "JL",
+    "color": "coral",
+    "time": "12 min ago",
+    "text": "A reminder that you don't have to have everything figured out to take the next small step. ☀️",
+    "likes": 12
+  },
+  {
+    "id": 2,
+    "author": "Alex Kim",
+    "initials": "AK",
+    "color": "mint",
+    "time": "38 min ago",
+    "text": "Spent the morning outside, got some fresh air, and came back with a clearer head. Highly recommend a little reset.",
+    "likes": 8
+  },
+  {
+    "id": 3,
+    "author": "Sam Rivera",
+    "initials": "SR",
+    "color": "gold",
+    "time": "1 hr ago",
+    "text": "What song instantly puts you in a better mood? Building a feel-good playlist and taking suggestions.",
+    "likes": 5
+  }
+]
