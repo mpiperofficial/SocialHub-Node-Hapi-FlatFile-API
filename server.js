@@ -69,7 +69,7 @@ async function start() {
   const host = process.env.HOST || "0.0.0.0";
   const configuredOrigins = process.env.FRONTEND_ORIGINS
     ? process.env.FRONTEND_ORIGINS.split(",").map(origin => origin.trim()).filter(Boolean)
-    : ["http://localhost:5080", "https://localhost:7080"];
+    : ["http://localhost:5080", "http://0.0.0.0:10000"];
 
   await fs.mkdir(DATA_DIR, { recursive: true });
   await readJson(POSTS_FILE, seedPosts);
