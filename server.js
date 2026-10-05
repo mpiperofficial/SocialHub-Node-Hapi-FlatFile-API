@@ -2,7 +2,7 @@ const Hapi = require("@hapi/hapi");
 const fs = require("fs/promises");
 const path = require("path");
 
-const DATA_DIR = path.join(__dirname, "data");
+const DATA_DIR = path.join(__dirname, "posts");
 const POSTS_FILE = path.join(DATA_DIR, "posts.json");
 const USERS_FILE = path.join(DATA_DIR, "users.json");
 
@@ -42,7 +42,7 @@ const seedUsers = [
     email: "demo@socialhub.local",
     displayName: "Mark Parker",
     initials: "MP",
-    role: "demo-user"
+    role: "admin-user"
   }
 ];
 
@@ -83,7 +83,7 @@ async function start() {
 
   server.route({
     method: "GET",
-    path: "/api/health",
+    path: "/",
     handler: () => ({
       status: "ok",
       service: "SocialHub Hapi API",
@@ -93,13 +93,13 @@ async function start() {
 
   server.route({
     method: "GET",
-    path: "/api/posts",
+    path: "/posts/posts.json",
     handler: async () => readJson(POSTS_FILE, seedPosts)
   });
 
   server.route({
     method: "POST",
-    path: "/api/posts",
+    path: "/posts/post.json",
     handler: async (request, h) => {
       const payload = request.payload || {};
       const text = typeof payload.text === "string" ? payload.text.trim() : "";
@@ -125,7 +125,7 @@ async function start() {
 
   server.route({
     method: "GET",
-    path: "/api/users",
+    path: "/users/users.json",
     handler: async () => readJson(USERS_FILE, seedUsers)
   });
 

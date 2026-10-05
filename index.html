@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SocialHub</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main id="login-screen" class="auth-wrap">
+    <section class="auth-card">
+      <div class="brand-mark">S</div>
+      <p class="eyebrow">YOUR COMMUNITY, CONNECTED</p>
+      <h1>Welcome back.</h1>
+      <p class="muted">Sign in to catch up with your people.</p>
+      <form id="login-form">
+        <label for="email">Email</label>
+        <input id="email" type="email" autocomplete="username" value="demo@socialhub.local" required>
+        <label for="password">Password</label>
+        <input id="password" type="password" autocomplete="current-password" value="Pass123!" required>
+        <p id="login-error" class="error" role="alert"></p>
+        <button class="primary full" type="submit">Sign in <span>→</span></button>
+      </form>
+      <p class="demo-note">Demo login: <strong>demo@socialhub.local</strong> / <strong>Pass123!</strong></p>
+    </section>
+  </main>
+
+  <div id="app-screen" class="app-shell hidden">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark small">S</span> Dating for People with Neuro-Divergence</div>
+      <nav>S
+        <a class="nav-item active" href="#"><span>⌂</span> Home</a>
+        <a class="nav-item" href="#feed"><span>◉</span> My feed</a>
+        <a class="nav-item" href="#people"><span>♧</span> People</a>
+        <a class="nav-item" href="#messages"><span>✉</span> Messages <i class="dot"></i></a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="mini-profile"><div class="avatar purple">MP</div><div><strong>Mark Piper</strong><small>My Profile</small></div></div>
+        <button id="logout" class="logout">↪ Sign out</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div><p class="eyebrow">SATURDAY, SEPTEMBER 26</p><h2>Your Mirror to Post Content and Express</h2></div>
+        <div class="top-actions"><button class="icon-btn" aria-label="Notifications">♧<i class="notification"></i></button><div class="avatar purple">MP</div></div>
+      </header>
+
+      <section class="welcome-panel">
+        <div><p class="eyebrow light">GOOD TO SEE YOU</p><h1>Make room for<br><em>good connections.</em></h1><p>Share a thought, see what your community is up to, and keep the conversation going.</p></div>
+        <div class="welcome-art" aria-hidden="true"><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="spark">✦</div><div class="art-card">✳<small>Stay connected</small></div></div>
+      </section>
+
+      <div class="content-grid">
+        <section class="feed-column" id="feed">
+          <div class="section-heading"><div><h3>Your feed</h3><p class="muted">A little inspiration from your community</p></div><span class="pill">Latest</span></div>
+          <form id="post-form" class="composer">
+            <div class="avatar purple">MP</div>
+            <div class="composer-body"><textarea id="post-text" rows="2" placeholder="What’s on your mind, {{userName}}?" maxlength="500" required></textarea><div class="composer-footer"><span class="muted">Keep it kind. Keep it real.</span><button class="primary" type="submit">Post <span>↗</span></button></div></div>
+          </form>
+          <div id="feed-list" class="feed-list"><div class="loading">Loading your feed…</div></div>
+        </section>
+        <aside class="right-column">
+          <section class="side-card" id="people"><div class="section-heading"><h3>People you might want to get to know </h3><span class="muted">•••</span></div>
+            <div class="person"><div class="avatar coral">JL</div><div class="person-info"><strong>{{userName}}</strong><small>Groups with your Interests and Like-minded</small></div><button class="add-btn" aria-label="Add Jamie">+</button></div>
+            <div class="person"><div class="avatar mint">AK</div><div class="person-info"><strong>{{userName}}</strong><small>Local Social Events Near Me</small></div><button class="add-btn" aria-label="Add Alex">+</button></div>
+            <div class="person"><div class="avatar gold">SR</div><div class="person-info"><strong>{{userName}}</strong><small>SocialHub Dating</small></div><button class="add-btn" aria-label="Add Sam">+</button></div>
+          </section>
+          <section class="quote-card"><div class="quote-icon">“</div><p>Small moments of connection can make an ordinary day feel meaningful.</p><span>— A reminder for today</span></section>
+          <div class="footer-links">About · Privacy · Community guidelines<br><span>SocialHub ©2026</span></div>
+        </aside>
+      </div>
+    </main>
+  </div>
+  <script src="/api-config.js"></script>
+  <script src="/app.js"></script>
+    <script src="/server.js"></script>
+</body>
+</html>
