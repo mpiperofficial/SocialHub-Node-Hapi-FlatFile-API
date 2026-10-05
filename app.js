@@ -1,4 +1,4 @@
-const API = window.SOCIALHUB_API_BASE || "https://socialhub-node-hapi-flatfile-api-2.onrender.com";
+const API = window.SOCIALHUB_API_BASE || "http://0.0.0.0:10000";
 const loginScreen = document.querySelector("#login-screen");
 const appScreen = document.querySelector("#app-screen");
 const loginForm = document.querySelector("#login-form");
