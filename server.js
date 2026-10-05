@@ -83,7 +83,7 @@ async function start() {
 
   server.route({
     method: "GET",
-    path: "{API_BASE_URL}/",
+    path: "/",
     handler: () => ({
       status: "ok",
       service: "SocialHub Hapi API",
@@ -93,13 +93,13 @@ async function start() {
 
   server.route({
     method: "GET",
-    path: "{API_BASE_URL}/posts/posts.json",
+    path: "/posts/posts.json",
     handler: async () => readJson(POSTS_FILE, seedPosts)
   });
 
   server.route({
     method: "POST",
-    path: "{API_BASE_URL}/posts/post.json",
+    path: "/posts/post.json",
     handler: async (request, h) => {
       const payload = request.payload || {};
       const text = typeof payload.text === "string" ? payload.text.trim() : "";
@@ -125,7 +125,7 @@ async function start() {
 
   server.route({
     method: "GET",
-    path: "{API_BASE_URL}/users/users.json",
+    path: "/users/users.json",
     handler: async () => readJson(USERS_FILE, seedUsers)
   });
 
